@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Toko Online</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<link rel="stylesheet" type="text/css" href="css/snap.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/menu.css" />
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<link rel="stylesheet" href="android.css" type="text/css"/>
+<link rel="stylesheet" href="css/owl.carousel.css">     
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="jquery-ui.css">
+<script type="text/javascript" language="javascript" src="jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script type="text/javascript" language="javascript" src="function.js"></script>
+<script src="js/jquery.accordionMenu.js"></script>
+
+    
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        #acdnmenu {
+            height: auto;
+            width: 100%;
+            margin: 0px;
+        }
+        
+        #acdnmenu ul.acdnTop {
+            display: block;
+            border: 1px solid #D8E2F3;
+            background: none repeat scroll 0 0 #FFFFFF;
+            padding-left: 0;
+        }
+        
+        #acdnmenu div.acdnHeading,
+        #acdnmenu a.acdnLink {
+            background: url("bg.gif") repeat-x scroll 0 0 #E8FFF8;
+            color: #000000;
+            font: 15px Verdana;
+            outline: medium none;
+            padding: 8px 8px 8px 24px;
+            text-align: left;
+            text-decoration: none;
+        }
+        
+        #acdnmenu div.acdnCurrent,
+        #acdnmenu div:hover,
+        #acdnmenu a.acdnLink:hover,
+        #acdnmenu div.acdnCurrent a.acdnLink {
+            background-position: 0 -64px;
+            color: #000000;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        
+        #acdnmenu a.acdnCurrent,
+        #acdnmenu a.acdnCurrent:hover {
+            color: #336699;
+            text-decoration: none;
+        }
+        
+        #acdnmenu div.acdnArrowImage {
+            background-image: url("arrows.gif");
+            background-position: 0 0;
+            height: 12px;
+            left: 4px;
+            top: 9px;
+            width: 12px;
+        }
+        
+        #acdnmenu div.acdnCurrent div.acdnArrowImage {
+            background-position: 0 -12px;
+        }
+        
+        #acdnmenu li.acdnSeparator {
+            border-bottom: 1px solid #D8E2F3;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+            font-size: 0px;
+        }
+        
+        #acdnmenu ul.acdnSub {
+            padding-left: 14px;
+        }
+        
+        #acdnmenu ul.acdnSub div.acdnHeading {
+            background: none repeat scroll 0 0 transparent;
+            color: #000000;
+            font: 12px Arial;
+            padding: 5px 5px 5px 20px;
+            text-align: left;
+        }
+        
+        #acdnmenu ul.acdnSub div.acdnHeading a {
+            color: #000000;
+        }
+        
+        #acdnmenu ul.acdnSub div.acdnCurrent {
+            background: none repeat scroll 0 0 transparent;
+            color: #000000;
+        }
+        
+        #acdnmenu ul.acdnSub a.acdnLink {
+            background: none repeat scroll 0 0 transparent;
+            color: #000000;
+            font: 11px Arial;
+            padding: 5px 5px 5px 20px;
+            text-decoration: none;
+        }
+        
+        #acdnmenu ul.acdnSub a.acdnLink:hover,
+        #acdnmenu ul.acdnSub a.acdnCurrent,
+        #acdnmenu ul.acdnSub div.acdnHeading a:hover,
+        #acdnmenu ul.acdnSub div.acdnHeading a.acdnCurrent {
+            background: none repeat scroll 0 0 transparent;
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        #acdnmenu ul.acdnSub div.acdnArrowImage {
+            background-image: url("arrows.gif");
+            background-position: 0 -24px;
+            height: 12px;
+            left: 4px;
+            top: 6px;
+            width: 12px;
+        }
+        
+        #acdnmenu ul.acdnSub div.acdnCurrent div.acdnArrowImage {
+            background-position: 0 -36px;
+        }
+        
+        #acdnmenu,
+        #acdnmenu ul {
+            display: block;
+            font-size: 0;
+            line-height: 0;
+        }
+        
+        #acdnmenu li {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        
+        #acdnmenu:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        #acdnmenu ul {
+            list-style-type: none;
+            margin: 0px;
+            overflow: hidden;
+            padding: 0px;
+            position: relative;
+            top: 0px;
+            display: none;
+        }
+        
+        #acdnmenu li {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #acdnmenu div.acdnHeading,
+        #acdnmenu div.acdnCurrent {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        #acdnmenu div.acdnArrowImage {
+            overflow: hidden;
+            position: absolute;
+        }
+    </style>
+</head>
+<body onload="onload()">
+	<div id="layang">
+		<div id="logo"><img src="image/logo.png" width="100" height="100"></div>
+		<div class="nama_app"><table width="100%" height="45px" border="0"><tr>
+		<td style="vertical-align:middle" align="left" valign="middle"><div id="nama_aplikasi"></div></td></tr></table></div>
+		<div class="logo_menu" ><img src="image/pesan.png" class="icon_pesan" onclick="buka_pesan()"></div>
+	</div>
+
+		<div id="content" class="snap-content">
+		<div id="isi">
+
+		</div>
+		</div>
+		<div class="snap-drawers">
+            <div id="menu_kiri" class="snap-drawer snap-drawer-left"></div>
+            <div id="menu_kanan" class="snap-drawer snap-drawer-right"></div>
+        </div>
+        <div id="navbawah">
+                <ul>
+	                <li id="border"><a href="javascript:;" id="open-left"><img src="image/menu.png"/></a></li>
+	                <li id="border"><a href="javascript:;" onclick="buka_halaman('kategori')"><img src="image/produk.png"class="icon_produk"/></a></li>
+	                <li id="border"><a href="javascript:;" onclick="buka_halaman('informasi')"><img src="image/info.png" class="icon_info" /></a></li>
+	                <li id="border"><a href="javascript:;" onclick="buka_keranjang()"><img src="image/keranjang.png" class="icon_keranjang" /></a></li>
+	                <li><a href="javascript:;" id="open-right"><img src="image/lainnya.png"/></a></li>
+                </ul>
+        </div>
+		<script src="js/owl.carousel.js"></script>
+        <script type="text/javascript" src="js/snap.js"></script>
+        <script type="text/javascript" src="js/demo.js"></script>
+		<div id="loading"><img src="loading.gif" style="width:50px"></div>
+</body>
+</html>
